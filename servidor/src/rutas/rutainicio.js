@@ -9,8 +9,9 @@ const Rinicio = express.Router();
 Rinicio.get('/', (req, res)=>{
     res.render('index')
 })
-export{Rinicio} 
 
 Rinicio.use(Rproductos)
 Rinicio.use(Rclientes)
 Rinicio.use(Rventas)
+
+export{Rinicio} 
