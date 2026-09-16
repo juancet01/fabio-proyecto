@@ -27,7 +27,7 @@ export const ccons=(peq,resp)=>{
 };
 export const cmt= async (peq,resp)=>{
     try{
-        let mostrarsql="SELECT idclientes,nombre from clientes order by idclientes";
+        let mostrarsql="SELECT idclientes,nombre,direccion,telefono from clientes order by idclientes";
         const[registros]= await bdd.query(mostrarsql)
         console.log(registros)
         resp.render('climostrar',{registros});
